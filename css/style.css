@@ -592,7 +592,6 @@ div.color-filters label {
         display: block;
         text-align: left;
     }
-
     .set-section {
         width: 46%;
         margin: 0 auto;
@@ -618,12 +617,13 @@ div.color-filters label {
         margin-bottom: 6%;
         text-align: center;
     }
+
     .grey-image {
         display: none;
     }
     .img-box {
         position: relative;
-        height: 400px;
+        height: 320px;
         background-image: url(../images/home_bg.jpg);
         background-size: cover;
         background-repeat: no-repeat;
