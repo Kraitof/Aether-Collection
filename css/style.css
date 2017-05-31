@@ -630,6 +630,9 @@ div.color-filters label {
         background-size: cover;
         background-repeat: no-repeat;
     }
+    .collectionBuilderForm {
+        width: 250px;
+    }
 }
 
 @media only screen and (max-width: 480px) {
