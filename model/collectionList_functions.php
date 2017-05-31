@@ -4,7 +4,7 @@
 	{
 		global $conn;
 		//query the database to select all data from the cards table
-		$sql = 'SELECT * FROM collectionlist WHERE userID = :userID';		
+		$sql = 'SELECT * FROM collectionList WHERE userID = :userID';		
 		//use a prepared statement to enhance security
 		$statement = $conn->prepare($sql);
 		$statement->bindValue(':userID', $userID);
@@ -18,7 +18,7 @@
 	{
 		global $conn;
 		//query the database to select all data from the cards table
-		$sql = 'INSERT INTO collectionlist (userID, cardID, quantity, conditionCard) VALUES (:userID, :cardID, :quantity, :conditionCard)';		
+		$sql = 'INSERT INTO collectionList (userID, cardID, quantity, conditionCard) VALUES (:userID, :cardID, :quantity, :conditionCard)';		
 		//use a prepared statement to enhance security
 		$statement = $conn->prepare($sql);
 		$statement->bindValue(':userID', $userID);
@@ -34,7 +34,7 @@
 	{
 		global $conn;
 		//query the database to select all data from the cards table
-		$sql = 'UPDATE collectionlist SET quantity = :quantity WHERE userID = :userID AND cardID = :cardID;';
+		$sql = 'UPDATE collectionList SET quantity = :quantity WHERE userID = :userID AND cardID = :cardID;';
 		//use a prepared statement to enhance security
 		$statement = $conn->prepare($sql);
 		$statement->bindValue(':cardID', $cardID);
@@ -49,7 +49,7 @@
 	{
 		global $conn;
 		//query the database to select all data from the cards table
-		$sql = 'DELETE FROM collectionlist WHERE userID = :userID AND cardID = :cardID';
+		$sql = 'DELETE FROM collectionList WHERE userID = :userID AND cardID = :cardID';
 		//use a prepared statement to enhance security
 		$statement = $conn->prepare($sql);
 		$statement->bindValue(':userID', $userID);
