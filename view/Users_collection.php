@@ -8,15 +8,16 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php
-  //start session management
-  session_start();
-  //connect to the database
+    //start session management
+    session_start();
+    //connect to the database
     require('../model/database.php');
     //retrieve the functions
     require('../model/functions_cards.php');
     require('../model/collectionList_functions.php');
     require('../model/functions_messages.php')
     ?>
+
 </head>
 
 <body>
@@ -27,14 +28,13 @@
       <a href="../index.php">Home</a>
       <a href="setSelection.php">Magic Sets</a>
       <a href="collectionBuilder.php">Collection Builder</a>
-      
-    
     <?php
     if(isset($_SESSION['user'])){
     echo '<a href="../controller/logout_process.php">Logout</a>';
     } else {
     echo '<a href="login.php">Login</a>';
     echo '<a href="registration.php">Register</a>';
+    header('Location: '.'login.php');
     }
     ?>
     </div>
