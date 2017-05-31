@@ -8,6 +8,7 @@ body {
    
     line-height: 28px;
 }
+
 hr {
     margin: 32px 0;
 }
@@ -341,7 +342,7 @@ div.color-filters label {
 .service-post {
     text-align: center;
     display: inline-block;
-    width: 31%;
+    width: 33%;
 }
 .service-icon {
     margin: 10px 0 20px 0;
@@ -452,12 +453,15 @@ div.color-filters label {
 .content {
     margin-top: 10%;
     margin-bottom: 10%;
+
+    
 }
 .section {
     width: 80%;
     margin: 0 auto;
     margin-bottom: 10%;
     display: block;
+
 }
 .set-section {
     width: 61%;
@@ -566,7 +570,7 @@ div.color-filters label {
     text-align: center;
     font-size: small;
 }
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .topnav a:not(:first-child) {
         display: none;
     }
@@ -574,8 +578,7 @@ div.color-filters label {
         float: right;
         display: block;
     }
-}
-@media screen and (max-width: 768px) {
+
     .topnav.responsive {
         position: relative;
     }
@@ -600,6 +603,7 @@ div.color-filters label {
         text-align: center;
         display: inline-block;
         width: 100%;
+
     }
     .service-icon {
         margin: 10px 0 20px 0;
@@ -626,7 +630,7 @@ div.color-filters label {
     }
 }
 
-@media screen and (max-width: 320px) {
+@media only screen and (max-width: 480px) {
     .topnav a:not(:first-child) {
         display: none;
     }
@@ -634,8 +638,7 @@ div.color-filters label {
         float: right;
         display: block;
     }
-}
-@media screen and (max-width: 320px) {
+
     .topnav.responsive {
         position: relative;
     }
@@ -656,10 +659,16 @@ div.color-filters label {
         margin-bottom: 10%;
         display: block;
     }
+    .section {
+    width: 100%;
+    margin-bottom: 10%;
+
+}
     .service-post {
         text-align: center;
         display: inline-block;
-        width: 100%;
+        width: 80%;
+
     }
     .service-icon {
         margin: 10px 0 20px 0;
@@ -673,6 +682,7 @@ div.color-filters label {
         font-weight: normal;
         margin-bottom: 6%;
         text-align: center;
+        color:red;
     }
     .grey-image {
         display: none;
@@ -685,4 +695,6 @@ div.color-filters label {
         background-repeat: no-repeat;
     }
 }
+
+
 /* Footer End */
