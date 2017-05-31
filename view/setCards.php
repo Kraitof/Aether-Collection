@@ -5,6 +5,7 @@
     <title>Set Name</title>
     <link rel="stylesheet" href="../css/keyrune.css">
     <link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php
     //start session management
     session_start();
