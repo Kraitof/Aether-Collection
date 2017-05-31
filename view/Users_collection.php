@@ -60,7 +60,7 @@
         //call user_message() function
         $userID = $_SESSION['id'];
         //call the get_products() function
-        $result = get_user_card_collection($_SESSION['id']);
+        $result = get_user_card_collection($userID);
     ?>
   <article class="content">
         <?php foreach($result as $card):?>

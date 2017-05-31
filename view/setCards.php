@@ -62,9 +62,9 @@
         //call the get_products() function
         $result = get_cards();
     ?>
-	<article class="set-section">
+    <article class="set-section">
         <?php foreach($result as $row):?>
-    	   	<div class="cardoverlay"
+            <div class="cardoverlay"
                 <?php
                     //if the imageSource field in the database is NULL or empty
                     if((is_null($row['imageSource'])) || (empty($row['imageSource'])))
@@ -79,10 +79,10 @@
                     }
                 ?>
 
-    		</div>
+            </div>
             </div>
             <?php endforeach; ?>
-	</article>
+    </article>
  </section>
     
 <div class="footer">Powered by Imperial Creative &trade;</div>

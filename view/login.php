@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	 <link rel="stylesheet" href="../css/style.css">
+     <link rel="stylesheet" href="../css/style.css">
      <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <title>Login</title>
 <?php
-	//start session management
-	session_start();
-	//connect to the database
-	require('../model/database.php');
-	//retrieve the functions
-	require('../model/functions_messages.php');
+    //start session management
+    session_start();
+    //connect to the database
+    require('../model/database.php');
+    //retrieve the functions
+    require('../model/functions_messages.php');
     ?>
 <body class="login">
 
@@ -50,19 +50,19 @@
             }
         </script>
     </header>
-	
+    
   <?php
-		//call user_message() function
-		$message = user_message();
-	?>
+        //call user_message() function
+        $message = user_message();
+    ?>
 
 <div class="formContainer-log" >
-	<form class="login-form" action="../controller/authentication.php" method="post">
-		<input class="login-username" type="text" name="username" id="username" placeholder="Enter your username*" required /><br />
-		<input class="login-password" type="password" id="password" name="password" placeholder="Enter your password*" required /><br />
-		<input class="login-submit" type="submit" name="login" value="Login" /><br>
-		<p>Don't have an account yet? Please <a href="registration.php" class="links_login-reg">sign up</a>.</p>
-	</form>
+    <form class="login-form" action="../controller/authentication.php" method="post">
+        <input class="login-username" type="text" name="username" id="username" placeholder="Enter your username*" required /><br />
+        <input class="login-password" type="password" id="password" name="password" placeholder="Enter your password*" required /><br />
+        <input class="login-submit" type="submit" name="login" value="Login" /><br>
+        <p>Don't have an account yet? Please <a href="registration.php" class="links_login-reg">sign up</a>.</p>
+    </form>
 </div>
 
  
