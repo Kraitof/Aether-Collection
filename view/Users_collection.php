@@ -15,8 +15,8 @@
     //retrieve the functions
     require('../model/functions_cards.php');
     require('../model/collectionList_functions.php');
-    require('../model/functions_messages.php')
-                require('../model/functions_users.php');
+    require('../model/functions_messages.php');
+    require('../model/functions_users.php');
     ?>
 </head>
 
