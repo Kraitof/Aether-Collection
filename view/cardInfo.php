@@ -16,6 +16,7 @@
     //retrieve the functions
     require('../model/functions_cards.php');
     require('../model/functions_messages.php');
+        require('../model/functions_users.php');
     ?>
 </head>
 
@@ -27,14 +28,15 @@
       <a href="collectionBuilder.php">Collection Builder</a>
       
     
-    <?php
-    if(isset($_SESSION['user'])){
-    echo '<a href="../controller/logout_process.php">Logout</a>';
-    } else {
-    echo '<a href="login.php">Login</a>';
-    echo '<a href="registration.php">Register</a>';
-    }
-    ?>
+<?php
+                    if(isset($_SESSION['user'])){
+                    if(isAdmin()){echo '<a href="adminPanel.php">Admin Panel</a>';}
+                    echo '<a href="../controller/logout_process.php">Logout</a>';
+                    } else {
+                    echo '<a href="login.php">Login</a>';
+                    echo '<a href="registration.php">Register</a>';
+                    }
+                ?>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
 

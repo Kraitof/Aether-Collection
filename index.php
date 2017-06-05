@@ -11,17 +11,19 @@
                 session_start();
                 //connect to the database
                 require('model/database.php');
+                    require('model/functions_users.php');
             ?>
     </head>
 
     <body>
         <!--Navigation-->
         <div class="topnav" id="myTopnav">
-            <a href="../index.php">Home</a>
+            <a href="index.php">Home</a>
             <a href="view/setSelection.php">Magic Sets</a>
             <a href="view/collectionBuilder.php">Collection Builder</a>
                 <?php
                     if(isset($_SESSION['user'])){
+                    if(isAdmin()){echo '<a href="view/adminPanel.php">Admin Panel</a>';};
                     echo '<a href="controller/logout_process.php">Logout</a>';
                     } else {
                     echo '<a href="view/login.php">Login</a>';
@@ -101,7 +103,3 @@
             </article>
         </section>
         
-        <div class="footer">Powered by Imperial Creative &trade;</div>
-        <div class="subfooter">Magic the Gathering, FNM is TM and copyright Wizards of the Coast, Inc, a subsidiary of Hasbro, Inc. All rights reserved. This site is unaffiliated.</div>
-    </body>
-</html>

@@ -1,4 +1,42 @@
 <?php
+	function editRank($rank, $userID) {
+		global $conn;
+		$sql = 'UPDATE user SET rank = ? WHERE userID = ?';
+		$statement = $conn->prepare($sql);
+		$statement->execute(array($rank, $userID));
+		$result = $statement->fetchAll();
+	
+		return $result;
+	}
+
+	function isAdmin()
+	{
+		global $conn;
+		$sql = 'SELECT * FROM user WHERE username = :username AND rank = 2';
+		$statement = $conn->prepare($sql);
+		$statement->bindValue(':username', $_SESSION['user']);
+		$statement->execute();
+		$result = $statement->fetchAll();
+		$statement->closeCursor();
+		$count = $statement->rowCount();	
+		if ($count==0) {
+			return false;
+		}
+		return true;
+	}
+
+	function fetchUsers()
+	{
+		global $conn;
+		$sql = 'SELECT * FROM user';
+		$statement = $conn->prepare($sql);
+		$statement->execute();
+		$result = $statement->fetchAll();
+		$statement->closeCursor();
+		return $result;
+	}
+
+
 	//create a function to retrieve the total number of matching usernames
 	function count_username($username)
 	{
@@ -37,6 +75,18 @@
 		$statement->bindValue(':username', $username);
 		$statement->bindValue(':password', $password);
 		$statement->bindValue(':salt', $salt);
+		$result = $statement->execute();
+		$statement->closeCursor();
+		return $result;			
+	}
+
+	//create a function to add a new user
+	function delete_user($userID)
+	{
+		global $conn;
+		$sql = "DELETE FROM user WHERE userID = :userID";
+		$statement = $conn->prepare($sql);
+		$statement->bindValue(':userID', $userID);
 		$result = $statement->execute();
 		$statement->closeCursor();
 		return $result;			

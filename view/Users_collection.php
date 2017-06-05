@@ -16,27 +16,25 @@
     require('../model/functions_cards.php');
     require('../model/collectionList_functions.php');
     require('../model/functions_messages.php')
+                require('../model/functions_users.php');
     ?>
-
 </head>
 
 <body>
-
-
 <!--Navigation-->
     <div class="topnav" id="myTopnav">
       <a href="../index.php">Home</a>
       <a href="setSelection.php">Magic Sets</a>
       <a href="collectionBuilder.php">Collection Builder</a>
-    <?php
-    if(isset($_SESSION['user'])){
-    echo '<a href="../controller/logout_process.php">Logout</a>';
-    } else {
-    echo '<a href="login.php">Login</a>';
-    echo '<a href="registration.php">Register</a>';
-    header('Location: '.'login.php');
-    }
-    ?>
+<?php
+                    if(isset($_SESSION['user'])){
+                    if(isAdmin()){echo '<a href="adminPanel.php">Admin Panel</a>';}
+                    echo '<a href="../controller/logout_process.php">Logout</a>';
+                    } else {
+                    echo '<a href="login.php">Login</a>';
+                    echo '<a href="registration.php">Register</a>';
+                    }
+                ?>
     </div>
     <!--Header-->
     <header class="img-box">

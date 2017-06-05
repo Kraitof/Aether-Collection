@@ -14,6 +14,7 @@ require ('../model/database.php');
 require ('../model/functions_cards.php');
 require ('../model/functions_messages.php');
 require ('../model/collectionList_functions.php');
+    require('../model/functions_users.php');
 ?>
 </head>
 
@@ -27,14 +28,15 @@ require ('../model/collectionList_functions.php');
       <a href="collectionBuilder.php">Collection Builder</a>
       
     
-    <?php
-    if(isset($_SESSION['user'])){
-    echo '<a href="../controller/logout_process.php">Logout</a>';
-    } else {
-    echo '<a href="login.php">Login</a>';
-    echo '<a href="registration.php">Register</a>';
-    }
-    ?>
+<?php
+                    if(isset($_SESSION['user'])){
+                    if(isAdmin()){echo '<a href="adminPanel.php">Admin Panel</a>';}
+                    echo '<a href="../controller/logout_process.php">Logout</a>';
+                    } else {
+                    echo '<a href="login.php">Login</a>';
+                    echo '<a href="registration.php">Register</a>';
+                    }
+                ?>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
     <!--Header-->
@@ -91,13 +93,15 @@ x.className = "topnav";
             <div>
                 <input class="collectionBuilderForm" name="quantity" placeholder="Qty">
             </div>
-            <div>
-                <input class="collectionBuilderForm" name="conditionCard" placeholder="condition">
-            </div>
 
-            <div>
-                <button>Save Collection</button>
-            </div>
+            <select name="conditionCard" class="collectionBuilderForm">
+                <option value="Condition">Condition</option>
+                <option value="Near Mint/Mint">Near Mint/Mint</option>
+                <option value="Slightly Played">Slightly Played</option>
+                <option value="Moderately Played">Moderately Played</option>
+                <option value="Heavily Played">Heavily Played</option>
+            </select>
+                <input type="submit" value="submit" name="conditionSubmit" />
         </form>
     </section>
 </div>
