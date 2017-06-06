@@ -60,7 +60,10 @@
         //call the get_products() function
         $result = get_user_card_collection($userID);
     ?>
+
+    
   <article class="content">
+
         <?php foreach($result as $card):?>
           <div class="cardoverlay"
                 <?php
@@ -93,6 +96,11 @@
                 <div class="collectionCondition">
                   <?php echo $card['conditionCard']?>
                 </div>
+
+                <div class="textdownload-submit">
+                              <?php $cardID=$card['cardID']; $name = get_cardNames_byID($cardID);?>
+            <a href="../model/collection_download.php?cardName=<?php echo $name['cardName'];?>&&quantity=<?php echo $card['quantity'];?>&&conditionCard=<?php echo $card['conditionCard'];?>" class="text-submit" >Save this</a>
+            </div>
         </div>
 
            

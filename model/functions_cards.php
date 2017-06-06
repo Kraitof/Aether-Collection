@@ -26,13 +26,23 @@
 		$statement->closeCursor();
 		return $result;
 	}
+		//create a function to retrieve all cards
+	function get_cardNames_byID($cardID)
+	{
+		global $conn;
+		$sql = 'SELECT * FROM cards WHERE cardID = :cardID';
+		$statement = $conn->prepare($sql);
+		$statement->bindValue(':cardID', $cardID);
+		$statement->execute();
+		$result = $statement->fetch();
+		$statement->closeCursor();
+		return $result;
+	}
 
 	function get_singlecard($cardName, $edition)
 	{
 		global $conn;
-
 		$sql = 'SELECT * FROM cards WHERE cardName = :cardName AND edition = :edition';
-
 		$statement = $conn->prepare($sql);
 		$statement->bindValue(':cardName', $cardName);
 		$statement->bindValue(':edition', $edition);
@@ -44,9 +54,7 @@
 	function get_singlecard_by_id($id)
 	{
 		global $conn;
-
 		$sql = 'SELECT * FROM cards WHERE cardID = :cardID';
-
 		$statement = $conn->prepare($sql);
 		$statement->bindValue(':cardID', $id);
 		$statement->execute();
