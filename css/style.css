@@ -604,7 +604,41 @@ div.color-filters label {
     border-radius: 50px;
     padding-left: 10px;
 }
-
+.collectionDrop{
+    height: 35px;
+    text-align: center;
+    width: 150px;
+    background: transparent;
+    border: 2px solid #3399ff;
+    color: #3399ff;
+    letter-spacing: 1px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    -webkit-appearance:none;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    padding-left: 10px;
+}
+.collectionSubmit{
+    height: 35px;
+    text-align: center;
+    width: 150px;
+    background: #3399ff;
+    border: 2px solid #3399ff;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    -webkit-appearance: none;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    padding-left: 10px;
+    margin-top: 45px;
+}
 .userDelete,
 .userSubmit {
     outline: none;

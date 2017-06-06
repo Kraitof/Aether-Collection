@@ -94,14 +94,14 @@ x.className = "topnav";
                 <input class="collectionBuilderForm" name="quantity" placeholder="Qty">
             </div>
 
-            <select name="conditionCard" class="collectionBuilderForm">
+            <select name="conditionCard" class="collectionDrop">
                 <option value="Condition">Condition</option>
                 <option value="Near Mint/Mint">Near Mint/Mint</option>
                 <option value="Slightly Played">Slightly Played</option>
                 <option value="Moderately Played">Moderately Played</option>
                 <option value="Heavily Played">Heavily Played</option>
-            </select>
-                <input type="submit" value="submit" name="conditionSubmit" />
+            </select><br>
+                <input type="submit" value="SUBMIT" class="collectionSubmit" name="conditionSubmit" />
         </form>
     </section>
 </div>
