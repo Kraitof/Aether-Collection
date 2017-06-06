@@ -1,43 +1,43 @@
 <head>
-<title>Collector Builder</title>
+    <title>Collector Builder</title>
     <link rel="stylesheet" href="../css/style.css">
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<?php
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php
 
 // start session management
-session_start();
+    session_start();
 // connect to the database
-require ('../model/database.php');
+    require ('../model/database.php');
 // retrieve the functions
-require ('../model/functions_cards.php');
-require ('../model/functions_messages.php');
-require ('../model/collectionList_functions.php');
+    require ('../model/functions_cards.php');
+    require ('../model/functions_messages.php');
+    require ('../model/collectionList_functions.php');
     require('../model/functions_users.php');
-?>
+    ?>
 </head>
 
 
 
 <body>
-<!--Navigation-->
+    <!--Navigation-->
     <div class="topnav" id="myTopnav">
-      <a href="../index.php">Home</a>
-      <a href="setSelection.php">Magic Sets</a>
-      <a href="collectionBuilder.php">Collection Builder</a>
-      
-    
-<?php
-                    if(isset($_SESSION['user'])){
-                    if(isAdmin()){echo '<a href="adminPanel.php">Admin Panel</a>';}
-                    echo '<a href="../controller/logout_process.php">Logout</a>';
-                    } else {
-                    echo '<a href="login.php">Login</a>';
-                    echo '<a href="registration.php">Register</a>';
-                    }
-                ?>
-    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        <a href="../index.php">Home</a>
+        <a href="setSelection.php">Magic Sets</a>
+        <a href="collectionBuilder.php">Collection Builder</a>
+
+
+        <?php
+        if(isset($_SESSION['user'])){
+            if(isAdmin()){echo '<a href="adminPanel.php">Admin Panel</a>';}
+            echo '<a href="../controller/logout_process.php">Logout</a>';
+        } else {
+            echo '<a href="login.php">Login</a>';
+            echo '<a href="registration.php">Register</a>';
+        }
+        ?>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
     <!--Header-->
     <header class="img-box">
@@ -56,32 +56,32 @@ require ('../model/collectionList_functions.php');
         </script>
     </header>
 
-<script> 
-function myFunction() {
-var x = document.getElementById("myTopnav");
-if (x.className === "topnav") {
-x.className += " responsive";
-} else {
-x.className = "topnav";
-}
-}
-</script>
+    <script> 
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
 </header>
 
 <script type="text/javascript" class="dropdown-cardsearch">
-  $( function() 
-  {
-    $.getJSON('../json/amonkhet.json', function(cardList){
-    var cardListA = [];
-    for (var card in cardList){
-    cardListA.push(card);
-  }
-    $( "#cardSearch" ).autocomplete({
-    source: cardListA.sort(),
-    minLength: 1
-  })
-  });
-  })
+    $( function() 
+    {
+        $.getJSON('../json/amonkhet.json', function(cardList){
+            var cardListA = [];
+            for (var card in cardList){
+                cardListA.push(card);
+            }
+            $( "#cardSearch" ).autocomplete({
+                source: cardListA.sort(),
+                minLength: 1
+            })
+        });
+    })
 </script>
 
 <div class="collectionBuilder">
@@ -101,7 +101,7 @@ x.className = "topnav";
                 <option value="Moderately Played">Moderately Played</option>
                 <option value="Heavily Played">Heavily Played</option>
             </select><br>
-                <input type="submit" value="SUBMIT" class="collectionSubmit" name="conditionSubmit" />
+            <input type="submit" value="SUBMIT" class="collectionSubmit" name="conditionSubmit" />
         </form>
     </section>
 </div>
