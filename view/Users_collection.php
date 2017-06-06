@@ -99,7 +99,7 @@
 
                 <div class="textdownload-submit">
                               <?php $cardID=$card['cardID']; $name = get_cardNames_byID($cardID);?>
-            <a href="../model/collection_download.php?cardName=<?php echo $name['cardName'];?>&&quantity=<?php echo $card['quantity'];?>&&conditionCard=<?php echo $card['conditionCard'];?>" class="text-submit" >Save this</a>
+            <a href="../model/collection_download.php?cardName=<?php echo $name['cardName'];?>&&quantity=<?php echo $card['quantity'];?>&&conditionCard=<?php echo $card['conditionCard'];?>" class="text-submit" >Export .txt</a>
             </div>
         </div>
 
