@@ -6,6 +6,15 @@
     <link rel="stylesheet" href="../css/keyrune.css">
     <link rel="stylesheet" href="../css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css">
+  <!-- Default Theme -->
+  <link href="owl-carousel/owl.theme.css" rel="stylesheet" type="text/css">
+
+  <!-- jQuery 1.7+ -->
+  <script src="../js/jquery-1.9.1.min.js"></script>
+
+  <!-- Include js plugin -->
+  <script src="owl-carousel/owl.carousel.js"></script>
     <?php
 //start session management
     session_start();
@@ -40,21 +49,42 @@
         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
     <!--Header-->
-    <header class="img-box">
-        <h1 class="title"></h1>
-        <div class="scroll"></div>
-
-        <script>
-            function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
-            }
-        </script>
-    </header>
+  <script>
+    $(document).ready(function() {
+        $(".owl-carousel").owlCarousel();
+    });
+    </script>
+  <section id="owl_carousel">
+    <div class="owl-carousel">
+        <div class="customer_image" id="">
+            <img class="img-responsive" src="../images/owl_carousel/plains_white_mana_mtg.jpg" alt="">
+        </div>
+        <div class="customer_image" id="">
+            <img class="img-responsive" src="../images/owl_carousel/island_blue_mana_mtg.jpg" alt="">
+        </div>
+        <div class="customer_image" id="">
+            <img class="img-responsive" src="../images/owl_carousel/forest_green_mana_mtg.jpg" alt="">
+        </div>
+        <div class="customer_image" id="">
+            <img class="img-responsive" src="../images/owl_carousel/mountain_red_mana_mtg.jpg" alt="">
+        </div>
+        <div class="customer_image" id="">
+            <img class="img-responsive" src="../images/owl_carousel/black_swamp_mana_mtg.jpg" alt="">
+        </div>
+                <div class="customer_image" id="">
+            <img class="img-responsive" src="../images/owl_carousel/MTG1.jpg" alt="">
+        </div>
+        <div class="customer_image" id="">
+            <img class="img-responsive" src="../images/owl_carousel/MTG2.jpg" alt="">
+        </div>
+        <div class="customer_image" id="">
+            <img class="img-responsive" src="../images/owl_carousel/MTG3.jpg" alt="">
+        </div>
+        <div class="customer_image" id="">
+            <img class="img-responsive" src="../images/owl_carousel/MTG4.jpg" alt="">
+        </div>
+    </div>
+</section>
 
 
     <!--Content-->

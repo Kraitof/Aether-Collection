@@ -11,8 +11,52 @@
                 session_start();
                 //connect to the database
                 require('model/database.php');
-                    require('model/functions_users.php');
+                require('model/functions_users.php');
             ?>
+        <!-- Magnific Popup plugin files -->
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="view/magnific-popup/magnific-popup.css">
+
+    <!-- jQuery 1.7+ -->
+    <script src="js/jquery-1.9.1.min.js"></script>
+
+    <!-- Magnific Popup core JS file -->
+    <script src="view/magnific-popup/jquery.magnific-popup.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.image-popup-vertical-fit').magnificPopup({
+                type: 'image',
+                closeOnContentClick: true,
+                mainClass: 'mfp-img-mobile',
+                image: {
+                    verticalFit: true
+                }
+            });
+
+            $('.image-popup-fit-width').magnificPopup({
+                type: 'image',
+                closeOnContentClick: true,
+                image: {
+                    verticalFit: false
+                }
+            });
+
+            $('.image-popup-no-margins').magnificPopup({
+                type: 'image',
+                closeOnContentClick: true,
+                closeBtnInside: false,
+                fixedContentPos: true,
+                mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+                image: {
+                    verticalFit: true
+                },
+                zoom: {
+                    enabled: true,
+                    duration: 300 // don't foget to change the duration also in CSS
+                }
+            });
+        });
+    </script>
     </head>
 
     <body>
@@ -92,14 +136,19 @@
 
         <section class="content">
             <article class="section3">
-                <div class="white-post">
-                    <h3 class="service-title">Want to join up?</h3>
-                    <p class="service-description">Click below to sign up and get acess to save your collection!</p>
-                <div class="container">
-                    <a href="view/registration.php">
-                    <button id="button">Registration</button>
+                <section id="magnific_popup">
+                    <a class="image-popup-vertical-fit" href="images/magnific_popup/Approach-of-the-Second-Sun.jpg" title="Approach of the Second-Sun">
+                        <img src="images/magnific_popup/Approach-of-the-Second-Sun.jpg" class="magnific_image" height="100" data-pin-nopin="true">
                     </a>
-                </div>
+                    <a class="image-popup-vertical-fit" href="images/magnific_popup/Cascading-Cataracts_.jpg" title="Cascading Cataracts">
+                        <img src="images/magnific_popup/Cascading-Cataracts_.jpg" class="magnific_image" height="100" data-pin-nopin="true">
+                    </a>
+                    <a class="image-popup-vertical-fit" href="images/magnific_popup/Lilinana-Deaths-Majesty.jpg" title="Lilinana Deaths Majesty">
+                        <img src="images/magnific_popup/Lilinana-Deaths-Majesty.jpg" class="magnific_image" height="100" data-pin-nopin="true">
+                    </a> 
+                </section>
             </article>
         </section>
+</body>
+</html>
         

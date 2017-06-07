@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="../css/keyrune.css">
   <link rel="stylesheet" href="../css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <?php
 // start session management
   session_start();
@@ -59,6 +60,7 @@
       </ol>
     </article>
   </section>
+
   <div class="footer">Powered by Imperial Creative &trade;</div>
   <div class="subfooter">Magic the Gathering, FNM is TM and copyright Wizards of the Coast, Inc, a subsidiary of Hasbro, Inc. All rights reserved. This site is unaffiliated.</div>
 </body>

@@ -7,8 +7,11 @@ Place the aethercollector folder into the htdocs folder.
 Happy viewing!
 
 NOTE:
-Mobile responsive view is not completed.
-Few Bugs in tablet view.
+3rd party java has not been included in the final proof as of yet.
+
+
+
 
 GitHub LINK: https://github.com/Kraitof/Aether-Collection/
 Website Link: http://aethercollector.com/
+
