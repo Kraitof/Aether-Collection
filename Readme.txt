@@ -15,6 +15,13 @@ User Log Details
 U: User
 P: Nintendo1
 
-GitHub LINK: https://github.com/Kraitof/Aether-Collection/
+GitHub LINK: https://github.com/Kraitof/Aether-Collec tion/
 Website Link: http://aethercollector.com/
 
+Linking Github to server:
+
+Last login: Thu Jun  8 10:52:21 on ttys000
+Josephs-MacBook-Pro:~ josephrennie$ ssh kraitof@166.62.6.79
+kraitof@166.62.6.79's password: (inut: LiYi&EcFqi2r06)
+kraitof@sg2plcpnl0152 [~]$ cd public_html
+kraitof@sg2plcpnl0152 [~/public_html]$ git pull
