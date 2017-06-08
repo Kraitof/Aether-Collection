@@ -120,3 +120,18 @@
 		return $count;
 	}
 ?>
+
+<?php
+function count_email($email)
+{
+  global $conn;
+  $sql = 'SELECT * FROM users WHERE email = :email';
+  $statement = $conn->prepare($sql);
+  $statement->bindValue(':email', $email);
+  $statement->execute();
+  $result = $statement->fetchAll();
+  $statement->closeCursor();
+  $count = $statement->rowCount();
+  return $count;
+}
+?>
